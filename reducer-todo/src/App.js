@@ -28,6 +28,11 @@ function Todo() {
     dispatch({ type: ON_INPUT_CHANGE, payload: event.target.value });
   };
 
+  const clearCompleted = (e) => {
+    e.preventDefault();
+    dispatch({ type: CLEAR_COMPLETED });
+  };
+
   return (
     <div className="App">
       {state.todos.map(el => (
@@ -43,7 +48,12 @@ function Todo() {
           {el.item}
         </div>
       ))}
-      <TodoForm todo={state.todo} add={add} onchange={onChange} />
+      <TodoForm
+        todo={state.todo}
+        add={add}
+        onchange={onChange}
+        clearCompleted={clearCompleted}
+      />
     </div>
   );
 }
