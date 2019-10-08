@@ -3,6 +3,8 @@ import React from "react";
 export const ADD_TO_LIST = "ADD_TO_LIST";
 export const ON_INPUT_CHANGE = "ON_INPUT_CHANGE";
 export const TOGGLE_COMPLETE = "TOGGLE_COMPLETE";
+export const CLEAR_COMPLETED = "CLEAR_COMPLETED";
+
 
 
 export const todoList = [

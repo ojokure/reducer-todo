@@ -14,6 +14,7 @@ export default function TodoForm(props) {
           onChange={props.onchange}
         />
         <button onClick={props.add}> Add to List </button>
+        <button>Clear Completed</button>
       </form>
     </div>
   );

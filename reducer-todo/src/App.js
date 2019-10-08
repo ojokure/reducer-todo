@@ -6,7 +6,8 @@ import TodoForm from "./TodoForm";
 import {
   ON_INPUT_CHANGE,
   ADD_TO_LIST,
-  TOGGLE_COMPLETE
+  TOGGLE_COMPLETE,
+  CLEAR_COMPLETED
 } from "./Reducer/Reducer";
 
 function Todo() {
