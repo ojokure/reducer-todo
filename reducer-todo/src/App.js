@@ -28,7 +28,7 @@ function Todo() {
     dispatch({ type: ON_INPUT_CHANGE, payload: event.target.value });
   };
 
-  const clearCompleted = (e) => {
+  const clearCompleted = e => {
     e.preventDefault();
     dispatch({ type: CLEAR_COMPLETED });
   };
@@ -42,7 +42,7 @@ function Todo() {
             fontFamily: "ABeeZee",
             color: el.completed ? "green" : "",
             fontWeight: el.completed ? "bold" : "",
-            textDecoration: el.completed ? "lineThrough" : "none"
+            textDecoration: el.completed ? "line-through" : "none"
           }}
         >
           {el.item}
