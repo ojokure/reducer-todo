@@ -2,6 +2,8 @@ import React from "react";
 
 export const ADD_TO_LIST = "ADD_TO_LIST";
 export const ON_INPUT_CHANGE = "ON_INPUT_CHANGE";
+export const TOGGLE_COMPLETE = "TOGGLE_COMPLETE";
+
 
 export const todoList = [
   { item: "You Dont Know JS", completed: false, id: new Date() },
@@ -31,6 +33,14 @@ export default function reducer(state, action) {
       };
     case ON_INPUT_CHANGE:
       return { ...state, todo: action.payload };
+      case TOGGLE_COMPLETE:
+          return {...state, todos: state.todos.map(el => {
+            if (el.id !== action.payload) { 
+                return el;
+            }
+            return { ...el, completed: !el.completed }
+        })
+}
     default:
       return state;
   }
